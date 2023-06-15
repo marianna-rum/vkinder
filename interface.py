@@ -3,7 +3,7 @@ import vk_api
 from vk_api.longpoll import VkLongPoll, VkEventType
 from vk_api.utils import get_random_id
 
-from config import community_token, acces_token
+from config import community_token, access_token
 from core import VkTools
 
 class BotInterface():
@@ -58,7 +58,7 @@ class BotInterface():
 
 
 if __name__ == '__main__':
-    bot = BotInterface(comunity_token, acces_token)
+    bot = BotInterface(community_token, access_token)
     bot.event_handler()
 
             
