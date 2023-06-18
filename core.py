@@ -21,7 +21,7 @@ class VkTools():
                             )
         user_info = {'name': info['first_name'] + ' '+ info['last_name'],
                      'id':  info['id'],
-                     'bdate': None, #info['bdate'] if 'bdate' in info else None,                     
+                     'bdate': info['bdate'] if 'bdate' in info else None,                     
                      'home_town': info['home_town'],
                      'sex': info['sex'],
                      'relation': info['relation'],
