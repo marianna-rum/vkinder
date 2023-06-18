@@ -1,5 +1,7 @@
 from datetime import datetime 
 
+from dateutil.relativedelta import relativedelta
+
 import vk_api
 
 from config import access_token
@@ -19,9 +21,10 @@ class VkTools():
                             )
         user_info = {'name': info['first_name'] + ' '+ info['last_name'],
                      'id':  info['id'],
-                     'bdate': info['bdate'] if 'bdate' in info else None,
+                     'bdate': None, #info['bdate'] if 'bdate' in info else None,                     
                      'home_town': info['home_town'],
                      'sex': info['sex'],
+                     'relation': info['relation'],
                      'city': info['city']['id']
                      }
         return user_info
